@@ -1,0 +1,43 @@
+:root {
+	--bg-primary: #f4f7fb;
+	--bg-secondary: #ffffff;
+	--text-primary: #1f2937;
+	--text-muted: #6b7280;
+	--ring-color: #2251cc;
+}
+
+.dark {
+	--bg-primary: #020617;
+	--bg-secondary: #0f172a;
+	--text-primary: #e2e8f0;
+	--text-muted: #94a3b8;
+	--ring-color: #3b82f6;
+}
+
+html,
+body,
+#root {
+	min-height: 100%;
+}
+
+body {
+	color: var(--text-primary);
+	background:
+		radial-gradient(circle at 0% 0%, rgba(34, 81, 204, 0.15), transparent 40%),
+		radial-gradient(
+			circle at 100% 0%,
+			rgba(15, 157, 122, 0.13),
+			transparent 35%
+		),
+		var(--bg-primary);
+}
+
+.focus-ring {
+	@apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-slate-900;
+	--tw-ring-color: var(--ring-color);
+}
+
+* {
+	scrollbar-width: thin;
+	scrollbar-color: #94a3b8 transparent;
+}
